@@ -1,0 +1,10 @@
+{
+  "root": ".",
+  "routes": {
+    "/my-binary": {
+      "proxy": {
+        "url": "http://localhost:${PORT}"
+      }
+    }
+  }
+}
