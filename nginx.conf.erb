@@ -12,11 +12,11 @@ http {
     keepalive_timeout 65;
 
     server {
-        listen <%= ENV['PORT'] %>;
+        listen <%= ENV['PORT'] || 8080 %>;  # Fallback to 8080 for local testing
         server_name localhost;
 
-        location /my-binary {
-            proxy_pass http://localhost:8080;
+        location / {
+            proxy_pass http://localhost:8080;  # Ensure this points to your binary's port
             proxy_set_header Host $host;
             proxy_set_header X-Real-IP $remote_addr;
             proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
