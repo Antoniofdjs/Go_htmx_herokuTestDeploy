@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Scrollbar Styles */
+.element::-webkit-scrollbar {
+  width: 0 !important;
+}
+.element {
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+/* Allow htmx to trigger spinners */
+.spinner {
+  display: none;
+}
+.htmx-request .spinner {
+  display: inline;
+}
+.htmx-request.spinner {
+  display: inline;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
