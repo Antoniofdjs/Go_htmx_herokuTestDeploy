@@ -1,0 +1,6 @@
+Here you deploy to heroku
+You need the static folder to serve images and css
+You need binary for heroku(linux)
+
+GOOS=linux GOARCH=amd64 go build -o your_app_name
+Use this to build app
